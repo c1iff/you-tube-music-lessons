@@ -43,6 +43,8 @@ gem 'autoprefixer-rails'
 
 gem 'dotenv-rails'
 
+gem 'omniauth-google-oauth2'
+
 
 
 group :development, :test do
