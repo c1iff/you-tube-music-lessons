@@ -45,6 +45,8 @@ gem 'dotenv-rails'
 
 gem 'omniauth-google-oauth2'
 
+gem 'active_type'
+
 
 
 group :development, :test do
