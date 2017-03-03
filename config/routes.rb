@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy', as: :logout
   resources :video_uploads, only: [:new, :create]
+  resources :searches, only: [:index, :new, :create]
 end

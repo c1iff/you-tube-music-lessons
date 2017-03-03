@@ -47,6 +47,8 @@ gem 'omniauth-google-oauth2'
 
 gem 'active_type'
 
+gem 'httparty'
+
 
 
 group :development, :test do
