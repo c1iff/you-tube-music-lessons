@@ -8,7 +8,7 @@
           <% if video %>
             <div class="col-md-4">
               <div class="yt_video thumbnail">
-                <%= link_to image_tag(video['snippet']['thumbnails']['default']['url'], alt: 'video',
+                <%= link_to image_tag(video['snippet']['thumbnails']['medium']['url'], alt: 'video',
                                       class: 'img-rounded'),
                             "https://www.youtube.com/watch?v=#{video['id']['videoId']}", target: '_blank' %>
                 <div class="caption">
