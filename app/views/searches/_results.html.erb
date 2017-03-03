@@ -18,6 +18,7 @@
                     <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
                     <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
                   </p>
+                  <%= link_to 'Add Video', videos_path(:video => { :link => "https://youtu.be/#{video['id']['videoId']}"}), class: 'btn btn-success', method: 'post'  %>
                 </div>
               </div>
             </div>
