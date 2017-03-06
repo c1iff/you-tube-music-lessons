@@ -5,8 +5,8 @@
   <p>
     <%= link_to 'Add video', new_video_path, class: 'btn btn-primary btn-lg' %>
   </p>
+  <div id="player"></div>
 </div>
-
 <% if @videos.any? %>
   <div class="container">
     <h1>Latest videos</h1>
@@ -27,6 +27,7 @@
                     <span class="glyphicon glyphicon glyphicon-thumbs-up"></span> <%= video.likes %>
                     <span class="glyphicon glyphicon glyphicon-thumbs-down"></span> <%= video.dislikes %>
                   </p>
+                  <button type="button" class="right-align" onclick="setVideoId('<%= video.uid %>')">Play</button>
                 </div>
               </div>
             </div>

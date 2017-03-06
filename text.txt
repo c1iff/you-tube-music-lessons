@@ -1,0 +1,42 @@
+Chris Clifford
+cclifford82@gmail.com
+530-200-6481
+https://www.linkedin.com/in/chrislclifford/
+https://github.com/c1iff/
+
+SUMMARY
+
+After 10 years working in a quality control laboratory, I’m excited to change careers and pursue a passion for designing and building amazing things. In my current program at Epicodus, I’m learning about web development technologies like Ruby on Rails, Angular 2, and Ember.js. I’m excited to join a team and work with other passionate people.
+EXPERIENCE
+
+Exova, Portland, OR
+Mechanical Testing Technician (2015 – 2017)
+Gained certification in the performance of a number of mechanical test procedures in an ISO/Nadcap laboratory
+Analyzed and documented test results, performed data review and processing, evaluated laboratory SOP’s
+
+Bullseye Glass Co., Portland, OR
+Quality Control Technician  (2014–2015)
+Performed glass fuse-compatibility testing, color determination, product grading, identifying and documenting manufacturing issues
+Tracked product data for inventory monitoring and  performed in-process production monitoring
+
+ForteBio Inc./Pall Corporation, Menlo Park, CA
+Quality Control Lead (2007 – 2013)
+Developed and implemented numerous QC testing procedures including specifications, product performance assays, and all associated documentation
+Provided accurate QC data of both instrument and consumable products, worked to identify manufacturing issues
+Successfully established and managed instrument refurbishment process which contributed to significant revenue for the company
+PROJECTS
+
+Music Lessons- An app to organize and manage Youtube music lesson videos built with: Ruby on Rails, React.js
+	-view project at: https://github.com/c1iff/you-tube-music-lessons
+US Immigration data visualization- A graphic visualization of US immigration data built with: Angular 2, D3.js
+-View project at: https://github.com/c1iff/js_immigration-data
+Twitter App -An app that uses the twitter API to send tweets, built with: Ruby, Sinatra, Twitter API
+	-View project at: https://github.com/c1iff/js_immigration-data
+EDUCATION
+
+ Epicodus, Portland, OR
+Gained proficiency in a number of web development tools including:  Angular 2, Ruby on Rails, Ember.js., PostgreSQL, jQuery, and Git
+Learned how to work collaboratively, apply new technologies, follow industry best practices, and use new skills to build innovative things
+
+California State University, Chico, Chico, CA
+Bachelors of Science degree, Biochemistry and Molecular Biology, 2007
