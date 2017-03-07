@@ -13,7 +13,7 @@ var Video = React.createClass({
           </div>
           <div className="caption">
             <h5>{this.props.video.title}</h5>
-            <p>{this.props.video.published_at}</p>
+            <p>Published at: {moment(this.props.video.published_at).format('MMMM DD YYYY, h:mm:ss a')}</p>
           </div>
           <button type="button" className="btn btn-danger" onClick={this.setVideoId}><span className="glyphicon glyphicon glyphicon-play-circle"></span></button>
         </div>
