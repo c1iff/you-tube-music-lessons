@@ -49,6 +49,7 @@ gem 'active_type'
 
 gem 'httparty'
 
+gem 'react-rails'
 
 
 group :development, :test do
