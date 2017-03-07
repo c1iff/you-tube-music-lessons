@@ -6,8 +6,8 @@
     <%= link_to 'Add video', new_video_path, class: 'btn btn-primary btn-lg' %>
   </p>
   <div id="player"></div>
-  <%= react_component 'AllVideos', { data: @videos } %>
 </div>
+<%= react_component 'AllVideos', { data: @videos } %>
 <% if @videos.any? %>
   <div class="container">
     <h1>Latest videos</h1>
