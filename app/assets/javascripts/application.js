@@ -17,4 +17,3 @@
 //= require moment
 //= require components
 //= require_tree .
-//= player

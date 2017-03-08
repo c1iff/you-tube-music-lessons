@@ -1,6 +1,10 @@
 var Video = React.createClass({
   setVideoId() {
-    this.props.playVidoFromId(this.props.video.uid)
+    var obj = {};
+    obj.playerVideoId = this.props.video.uid
+    obj.autoplay = '1'
+    console.log('full obj', obj);
+    this.props.playVidoFromId(obj);
   },
 
   render() {
@@ -15,7 +19,7 @@ var Video = React.createClass({
             <h5>{this.props.video.title}</h5>
             <p>Published at: {moment(this.props.video.published_at).format('MMMM DD YYYY, h:mm:ss a')}</p>
           </div>
-          <button type="button" className="btn btn-danger" onClick={this.setVideoId}><span className="glyphicon glyphicon glyphicon-play-circle"></span></button>
+          <button type="button" className="btn btn-danger" onClick={this.setVideoId}><span className="glyphicon glyphicon glyphicon-play"></span></button>
         </div>
       </div>
     )
