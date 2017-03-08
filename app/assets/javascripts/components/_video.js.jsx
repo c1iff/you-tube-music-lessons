@@ -8,7 +8,7 @@ var Video = React.createClass({
     return (
       <div className="col-md-6">
         <div className="yt_video">
-            <img src={src} />    
+            <img src={src} />
           <div className="caption">
             <h5>{this.props.video.title}</h5>
             <p>Published at: {moment(this.props.video.published_at).format('MMMM DD YYYY, h:mm:ss a')}</p>

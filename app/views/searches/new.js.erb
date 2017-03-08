@@ -1,2 +1,6 @@
 $(".results").empty()
 $(".results").append('<%= j render "results" %>')
+$(".search-play").on("click", function(){
+  alert('search play')
+  setVideoId(video['id']['videoId'])
+});
