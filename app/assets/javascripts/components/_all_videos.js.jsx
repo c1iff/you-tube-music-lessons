@@ -11,7 +11,7 @@ var AllVideos = React.createClass({
   },
 
   render() {
-    var videos = this.props.data.map((video) => {
+    var videos = this.props.data.map((video, index) => {
       return (
         <div key={video.id}>
           <Video video={video} playVidoFromId={this.playVidoFromId} />

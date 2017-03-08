@@ -31,6 +31,8 @@ height: 100%;
 }
 
 .yt_video {
+  padding-left: 5px;
+  padding-right: 5px;
   padding-bottom: 15px;
 }
 
@@ -44,12 +46,18 @@ height: 100%;
 }
 
 .index-picture {
+
   width: 100%;
 }
 
 .main-panel {
-  background-color: #9e9e9e;
-  padding-top: 15px;
+
+  padding-right: 5px;
+}
+
+.search-panel {
+
+  padding-left: 5px;
 }
 
 i.nav-icon {
@@ -62,4 +70,8 @@ i.button-icon {
 
 .section {
   height: 60px;
+}
+
+.caption {
+  height: 70px;
 }

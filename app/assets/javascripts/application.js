@@ -15,6 +15,7 @@
 //= require react
 //= require react_ujs
 //= require moment
+//= require bootstrap
 //= ct-navbar
 //= require components
 //= require_tree .
