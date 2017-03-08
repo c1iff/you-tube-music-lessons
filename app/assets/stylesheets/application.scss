@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'bootstrap/theme';
+@import "ct-nav";
 
 .nav > li > span {
   display: block;
@@ -30,5 +31,27 @@ height: 100%;
 }
 
 .yt_video {
-  padding-bottom: 5px;
+  padding-bottom: 15px;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.index-picture {
+  width: 100%;
+}
+
+.main-panel {
+  background-color: #9e9e9e;
+  padding-top: 15px;
+}
+
+i.glyphicon {
+    font-size: 1.8em;
+}
+
+.section {
+  height: 50px;
 }

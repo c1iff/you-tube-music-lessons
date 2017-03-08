@@ -1,19 +1,19 @@
-
+<div class="section"></div>
 <div class="container text-center">
-  <h1>You Tube Video Lessons</h1>
-  <p>Click the button below to add a video from YouTube.</p><br><br>
+  <h1>You Tube Video Lessons</h1><br>
+
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
-      <div class="col-md-12">
+    <div class="col-md-9 main-panel">
+      <div class="col-md-12 nopadding">
         <div class="video-container">
           <div id="player"></div>
         </div>
       </div>
       <%= react_component 'AllVideos', { data: @videos } %>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <%= render 'search', object: @search %>
     </div>
   </div>

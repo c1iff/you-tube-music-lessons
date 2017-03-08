@@ -6,9 +6,9 @@ var Video = React.createClass({
   render() {
     src = "https://img.youtube.com/vi/" + this.props.video.uid + "/mqdefault.jpg"
     return (
-      <div className="col-md-6">
+      <div className="col-md-6 nopadding">
         <div className="yt_video">
-            <img src={src} />
+            <img src={src} className="index-picture" />
           <div className="caption">
             <h5>{this.props.video.title}</h5>
             <p>Published at: {moment(this.props.video.published_at).format('MMMM DD YYYY, h:mm:ss a')}</p>
