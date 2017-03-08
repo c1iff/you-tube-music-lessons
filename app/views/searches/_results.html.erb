@@ -1,30 +1,15 @@
 <% if @results.any? %>
-  <div class="container">
-    <h1>Latest videos</h1>
-    <div id="player-wrapper"></div>
-    <% @results['items'].in_groups_of(3) do |group| %>
-      <div class="row">
-        <% group.each do |video| %>
-          <% if video %>
-            <div class="col-md-4">
-              <div class="yt_video thumbnail">
-                <%= link_to image_tag(video['snippet']['thumbnails']['medium']['url'], alt: 'video',
-                                      class: 'img-rounded'),
-                            "https://www.youtube.com/watch?v=#{video['id']['videoId']}", target: '_blank' %>
-                <div class="caption">
-                  <h5><%= video['snippet']['title'] %></h5>
-                  <p>Published at <%= video['snippet']['publishedAt'] %></p>
-                  <p>
-                    <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
-                    <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
-                  </p>
-                  <%= link_to 'Add Video', videos_path(:video => { :link => "https://youtu.be/#{video['id']['videoId']}"}), class: 'btn btn-success', method: 'post'  %>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
+  <% @results['items'].each do |video| %>
+    <% if video %>
+      <div class="yt_video">
+        <%= link_to image_tag(video['snippet']['thumbnails']['medium']['url'], alt: 'video'),
+                    "https://www.youtube.com/watch?v=#{video['id']['videoId']}", target: '_blank' %>
+        <div class="caption">
+          <h5><%= video['snippet']['title'] %></h5>
+          <p>Published at <%= video['snippet']['publishedAt'] %></p>
+          <%= link_to 'Add Video', videos_path(:video => { :link => "https://youtu.be/#{video['id']['videoId']}"}), class: 'btn btn-success', method: 'post'  %>
+        </div>
       </div>
     <% end %>
-  </div>
+  <% end %>
 <% end %>

@@ -14,8 +14,8 @@ function setVideoId(id) {
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    height: '390',
-    width: '640',
+    // height: '390',
+    // width: '640',
     videoId: videoId,
     events: {
       // 'onReady': onPlayerReady,

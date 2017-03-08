@@ -1,0 +1,16 @@
+<div class="search-area">
+    <%= form_for @search, remote: true do |f| %>
+    <%= render 'shared/errors', object: @search %>
+
+    <div class="form-group">
+
+      <%= f.text_field :search_term, class: 'form-control', required: true %>
+      <span class="help-block">Search for a Video</span>
+
+      <%= f.submit 'Search', class: 'btn btn-danger' %>
+    </div>
+    <% end %>
+    <div class="results"></div>
+
+
+</div>

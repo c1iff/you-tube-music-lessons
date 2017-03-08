@@ -1,40 +1,20 @@
 
 <div class="container text-center">
   <h1>You Tube Video Lessons</h1>
-  <p>Click the button below to add a video from YouTube.</p>
-  <p>
-    <%= link_to 'Add video', new_video_path, class: 'btn btn-primary btn-lg' %>
-  </p>
-  <div id="player"></div>
+  <p>Click the button below to add a video from YouTube.</p><br><br>
 </div>
-<%= react_component 'AllVideos', { data: @videos } %>
-<% if @videos.any? %>
-  <div class="container">
-    <h1>Latest videos</h1>
-    <div id="player-wrapper"></div>
-    <% @videos.in_groups_of(3) do |group| %>
-      <div class="row">
-        <% group.each do |video| %>
-          <% if video %>
-            <div class="col-md-4">
-              <div class="yt_video thumbnail">
-                <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
-                                      class: 'img-rounded'),
-                            "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
-                <div class="caption">
-                  <h5><%= video.title %></h5>
-                  <p>Published at <%= video.published_at.strftime('%-d %B %Y %H:%M:%S') %></p>
-                  <p>
-                    <span class="glyphicon glyphicon glyphicon-thumbs-up"></span> <%= video.likes %>
-                    <span class="glyphicon glyphicon glyphicon-thumbs-down"></span> <%= video.dislikes %>
-                  </p>
-                  <button type="button" class="btn btn-primary" onclick="setVideoId('<%= video.uid %>')">Play</button>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="col-md-12">
+        <div class="video-container">
+          <div id="player"></div>
+        </div>
       </div>
-    <% end %>
+      <%= react_component 'AllVideos', { data: @videos } %>
+    </div>
+    <div class="col-md-4">
+      <%= render 'search', object: @search %>
+    </div>
   </div>
-<% end %>
+</div>
