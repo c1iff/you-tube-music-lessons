@@ -34,6 +34,10 @@ height: 100%;
   padding-bottom: 15px;
 }
 
+.search-picture {
+  width: 100%;
+}
+
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
@@ -48,10 +52,14 @@ height: 100%;
   padding-top: 15px;
 }
 
-i.glyphicon {
+i.nav-icon {
     font-size: 1.8em;
 }
 
+i.button-icon {
+    font-size: 1.4em;
+}
+
 .section {
-  height: 50px;
+  height: 60px;
 }

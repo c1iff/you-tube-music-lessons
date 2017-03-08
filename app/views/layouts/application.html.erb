@@ -25,10 +25,12 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                  <%= link_to 'YouTube Lessons', root_path, class: 'navbar-brand navbar-brand-logo' %>
+                  <%= link_to root_path, class: 'navbar-brand navbar-brand-logo' do %>
                   <!-- <div class="logo">
                     <img src="http://media.westernmutual.com/Content/Assets/wm_web_logo_small.png?v=1.0.17039.3">
                   </div> -->
+                    <div class="brand"> YouTube Lessons </div>
+                  <% end %>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,7 +38,7 @@
 
                       <li>
                           <%= link_to (root_path)  do %>
-                              <i class="glyphicon glyphicon-film">
+                              <i class="glyphicon glyphicon-film nav-icon">
                               </i>
                               <p>Videos</p>
                           <% end %>
@@ -44,7 +46,7 @@
 
                       <li>
                           <%= link_to (new_video_path)  do %>
-                              <i class="glyphicon glyphicon-plus">
+                              <i class="glyphicon glyphicon-plus nav-icon">
                               </i>
                               <p>New Video</p>
                           <% end %>
@@ -52,7 +54,7 @@
 
                       <li>
                           <%= link_to (new_search_path)  do %>
-                              <i class="glyphicon glyphicon-search">
+                              <i class="glyphicon glyphicon-search nav-icon">
                               </i>
                               <p>Search</p>
                           <% end %>
@@ -60,7 +62,7 @@
 
                       <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                  <i class="glyphicon glyphicon-user"></i>
+                                  <i class="glyphicon glyphicon-user nav-icon"></i>
                                   <p>Account</p>
                               </a>
                             <ul class="dropdown-menu">
