@@ -1,7 +1,8 @@
 class VideosController < ApplicationController
   def index
+    @user = User.find(current_user.id)
     @search = Search.new
-    @videos = Video.order('created_at DESC')
+    @videos = @user.videos.order('created_at DESC')
   end
 
   def new
@@ -9,8 +10,8 @@ class VideosController < ApplicationController
   end
 
   def create
-    byebug
     @video = Video.new(video_params)
+    @video.user_id = current_user.id
     if @video.save
      flash[:success] = 'Video added!'
      redirect_to root_url

@@ -5,6 +5,8 @@ class Video < ApplicationRecord
 
   before_create :check_video
 
+  belongs_to :user
+
   def check_video()
     video = Yt::Video.new url: self.link
     self.uid = video.id

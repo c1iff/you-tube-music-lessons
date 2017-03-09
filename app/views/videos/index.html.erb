@@ -10,6 +10,7 @@
         <div class="video-container">
           <div id="player"></div>
         </div>
+        <% if current_user %>
         <ul class="nav nav-tabs">
           <li class="active"><a data-toggle="tab" href="#home">All</a></li>
           <li><a data-toggle="tab" href="#menu1">Songs</a></li>
@@ -18,6 +19,11 @@
         </ul>
       </div>
       <%= react_component 'AllVideos', { data: @videos } %>
+      <% else %>
+        <h3>Sign in to your YouTube account to view your playlists</h3>
+        <%= link_to 'Log In', '/auth/google_oauth2' %>
+        </div>
+      <% end %>
     </div>
     <div class="col-md-3 main-panel">
       <%= render 'search', object: @search %>
