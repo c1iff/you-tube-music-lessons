@@ -9,6 +9,7 @@ class VideosController < ApplicationController
   end
 
   def create
+    byebug
     @video = Video.new(video_params)
     if @video.save
      flash[:success] = 'Video added!'
@@ -19,14 +20,14 @@ class VideosController < ApplicationController
   end
 
   def update
-    @video = Video.new(video_params)
+    @video = Video.find(params[:id])
     respond_to do |format|
-      if @video.update(contact_params)
-        format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
-        format.json { render :show, status: :ok, location: @contact }
+      if @video.update(category: params[:category])
+        # format.html { redirect_to 'root', notice: 'Video was successfully updated.' }
+        format.json { render json: @video }
       else
         format.html { render :edit }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
+        format.json { render json: @video.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -34,6 +35,6 @@ class VideosController < ApplicationController
 private
 
   def video_params
-    params.require(:video).permit(:link)
+    params.require(:video).permit(:id, :link, :category)
   end
 end

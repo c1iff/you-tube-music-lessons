@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :videos, only: [:index, :new, :create]
+  resources :videos, only: [:index, :new, :create, :update]
   root to: 'videos#index'
   get '/auth/:provider/callback', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy', as: :logout
