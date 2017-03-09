@@ -11,13 +11,14 @@
 }
 
 .nav {
-  height: 65px;
+  height: 85px;
 }
 
 .video-container {
 position: relative;
 padding-bottom: 56.25%;
 padding-top: 30px; height: 0; overflow: hidden;
+margin-bottom: 10px;
 }
 
 .video-container iframe,
@@ -92,4 +93,16 @@ i.button-icon {
   margin:0 auto; left:0px;
   right:0px;
   z-index:100
+}
+
+.button-right {
+  float: right;
+}
+
+.radio {
+  float: left;
+}
+
+a {
+  font-size: 1.4em;
 }

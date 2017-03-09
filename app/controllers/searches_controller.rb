@@ -3,12 +3,14 @@ class SearchesController < ApplicationController
   def index
     @feed = Feed.new()
     @results = @feed.get_feed(current_user)
-    # if @results['error']
-    #   flash[:error] = 'There was an error while performing your search...'
-    # end
-    respond_to do |format|
-      format.html {render 'index' }
-      format.js { render 'new' }
+    if @results['error']
+      flash[:error] = 'There was an error while performing your search...'
+      @results = {}
+    else
+      respond_to do |format|
+        format.html {render 'index' }
+        format.js { render 'feed' }
+      end
     end
   end
 

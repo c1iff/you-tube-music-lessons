@@ -1,8 +1,10 @@
 class VideosController < ApplicationController
   def index
-    @user = User.find(current_user.id)
+    if current_user
+      @user = User.find(current_user.id)
+      @videos = @user.videos.order('created_at DESC')
+    end
     @search = Search.new
-    @videos = @user.videos.order('created_at DESC')
   end
 
   def new

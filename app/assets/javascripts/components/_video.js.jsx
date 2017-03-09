@@ -27,10 +27,20 @@ var Video = React.createClass({
             <p>Published at: {moment(this.props.video.published_at).format('MMMM DD YYYY, h:mm:ss a')}</p>
             <p>Category: {this.props.video.category}</p>
           </div>
-          <button type="button" className="btn btn-default" onClick={this.updateCategory.bind(this, 'song')}>Song</button>
-          <button type="button" className="btn btn-default" onClick={this.updateCategory.bind(this, 'technique')}>Technique</button>
-          <button type="button" className="btn btn-default" onClick={this.updateCategory.bind(this, 'gear')}>Gear</button>
-          <button type="button" className="btn btn-default" onClick={this.props.handleDelete}>Delete</button>
+          <div className='radio'>
+            <label className="radio-inline">
+              <input type="radio" name={this.props.video.id} id="inlineRadio1" value="option1" onClick={this.updateCategory.bind(this, 'song')} /> Song
+            </label>
+            <label className="radio-inline">
+              <input type="radio" name={this.props.video.id} id="inlineRadio2" value="option2" onClick={this.updateCategory.bind(this, 'technique')} /> Technique
+            </label>
+            <label className="radio-inline">
+              <input type="radio" name={this.props.video.id} id="inlineRadio3" value="option3" onClick={this.updateCategory.bind(this, 'gear')} /> Gear
+            </label>
+          </div>
+
+
+          <button type="button" className="btn btn-danger button-right" onClick={this.props.handleDelete}><span className="glyphicon glyphicon glyphicon-trash"></span></button>
         </div>
       </div>
     )
