@@ -1,0 +1,24 @@
+Bugs
+  -Errors occur when user token expires
+  -radio buttons on videos don't save state
+  -search result date not formatted correctly
+  -Account dropdown alignment is off
+  -etc
+
+Features
+  -Streamline UI design
+  -Add show more ajax call to search results
+  -Add video sorting
+  -Add save as YouTube playlist
+  -Add user defined sorting
+  -Add additional dynamic React.js UI element
+  -Add ranking feature
+  -Add guitar tab feature
+  -Add search suggestion to search field
+  -etc
+
+Refactoring
+  -Change all html to react components
+  -Clean up javascript
+  -Add additional component for video
+  -Add testing
