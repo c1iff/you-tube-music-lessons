@@ -38,19 +38,46 @@ var AllVideos = React.createClass({
     this.setState({ videos: videos })
   },
 
-  render() {
-    var videos = this.state.videos.map((video, index) => {
+  getVideoHtml(videos) {
+    var videosWithHtml = videos.map((video, index) => {
       return (
         <div key={video.id}>
           <Video video={video} playVidoFromId={this.playVidoFromId} handleUpdate={this.handleUpdate} />
         </div>
       )
     });
+    return videosWithHtml
+  },
+
+  filterVideoByCategory(videos, category) {
+    var filteredVideos = videos.filter((s, index) => {
+      return s.category == category;
+    });
+    return filteredVideos
+  },
+
+  render() {
+    var videos = this.getVideoHtml(this.state.videos);
+    var songVideos = this.getVideoHtml(this.filterVideoByCategory(this.state.videos, 'song'))
+    var techniqueVideos = this.getVideoHtml(this.filterVideoByCategory(this.state.videos, 'technique'))
+    var gearVideos = this.getVideoHtml(this.filterVideoByCategory(this.state.videos, 'gear'))
+
+
 
     return (
-      <div>
-        <h3>Videos</h3>
-        {videos}
+      <div className="tab-content">
+        <div id="home" className="tab-pane fade in active">
+          {videos}
+        </div>
+        <div id="menu1" className="tab-pane fade">
+          {songVideos}
+        </div>
+        <div id="menu2" className="tab-pane fade">
+          {techniqueVideos}
+        </div>
+        <div id="menu3" className="tab-pane fade">
+          {gearVideos}
+        </div>
       </div>
     )
   }
