@@ -38,11 +38,28 @@ var AllVideos = React.createClass({
     this.setState({ videos: videos })
   },
 
+  handleDelete(id) {
+    $.ajax({
+      url: `/videos/${id}`,
+      type: 'DELETE',
+      success: () => {
+        this.removeVideoFromDOM(id);
+      }
+    });
+  },
+
+  removeVideoFromDOM(id) {
+    var newVideos = this.state.videos.filter((video) => {
+      return video.id != id;
+    });
+    this.setState({ videos: newVideos })
+  },
+
   getVideoHtml(videos) {
     var videosWithHtml = videos.map((video, index) => {
       return (
         <div key={video.id}>
-          <Video video={video} playVidoFromId={this.playVidoFromId} handleUpdate={this.handleUpdate} />
+          <Video video={video} playVidoFromId={this.playVidoFromId} handleUpdate={this.handleUpdate} handleDelete={this.handleDelete.bind(this, video.id)} />
         </div>
       )
     });
@@ -58,11 +75,9 @@ var AllVideos = React.createClass({
 
   render() {
     var videos = this.getVideoHtml(this.state.videos);
-    var songVideos = this.getVideoHtml(this.filterVideoByCategory(this.state.videos, 'song'))
-    var techniqueVideos = this.getVideoHtml(this.filterVideoByCategory(this.state.videos, 'technique'))
-    var gearVideos = this.getVideoHtml(this.filterVideoByCategory(this.state.videos, 'gear'))
-
-
+    var songVideos = this.getVideoHtml(this.filterVideoByCategory(this.state.videos, 'song'));
+    var techniqueVideos = this.getVideoHtml(this.filterVideoByCategory(this.state.videos, 'technique'));
+    var gearVideos = this.getVideoHtml(this.filterVideoByCategory(this.state.videos, 'gear'));
 
     return (
       <div className="tab-content">

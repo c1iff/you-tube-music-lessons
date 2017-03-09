@@ -23,6 +23,7 @@ var Video = React.createClass({
           <button type="button" className="btn btn-default" onClick={this.updateCategory.bind(this, 'song')}>Song</button>
           <button type="button" className="btn btn-default" onClick={this.updateCategory.bind(this, 'technique')}>Technique</button>
           <button type="button" className="btn btn-default" onClick={this.updateCategory.bind(this, 'gear')}>Gear</button>
+          <button type="button" className="btn btn-default" onClick={this.props.handleDelete}>Delete</button>
         </div>
       </div>
     )

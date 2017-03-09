@@ -23,10 +23,18 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
     respond_to do |format|
       if @video.update(category: params[:category])
-        # format.html { redirect_to 'root', notice: 'Video was successfully updated.' }
         format.json { render json: @video }
       else
-        format.html { render :edit }
+        format.json { render json: @video.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    respond_to do |format|
+      if Video.destroy(params[:id])
+        format.json { render json: @video }
+      else
         format.json { render json: @video.errors, status: :unprocessable_entity }
       end
     end
