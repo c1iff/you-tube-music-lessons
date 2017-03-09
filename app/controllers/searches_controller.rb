@@ -1,6 +1,15 @@
 class SearchesController < ApplicationController
-  def index
 
+  def index
+    @feed = Feed.new()
+    @results = @feed.get_feed(current_user)
+    # if @results['error']
+    #   flash[:error] = 'There was an error while performing your search...'
+    # end
+    respond_to do |format|
+      format.html {render 'index' }
+      format.js { render 'new' }
+    end
   end
 
   def new
@@ -23,5 +32,4 @@ class SearchesController < ApplicationController
       redirect_to new_search_path
     end
   end
-
 end
