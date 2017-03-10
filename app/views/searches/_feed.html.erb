@@ -10,10 +10,7 @@
               <div class="caption-search">
                 <h5><%= video['snippet']['title'] %></h5>
                 <p>Published at <%= video['snippet']['publishedAt'] %></p>
-                <%= link_to videos_path(:video => { :link => "https://youtu.be/#{video['id']['videoId']}"}), class: 'btn btn-success', method: 'post'  do %>
-                  <i class="glyphicon glyphicon-plus"></i>
-                <% end %>
-                <button type="button" class="btn btn-danger" class="search-play" onclick="setVideoId('<%= video['id']['videoId'] %>')"><span class="glyphicon glyphicon glyphicon-play"></span></button>
+                
               </div>
             </div>
           </div>

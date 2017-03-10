@@ -10,6 +10,7 @@ var Video = React.createClass({
 
   render() {
     src = "https://img.youtube.com/vi/" + this.props.video.uid + "/mqdefault.jpg"
+
     return (
       <div className="col-md-6 nopadding">
 
@@ -29,7 +30,7 @@ var Video = React.createClass({
           </div>
           <div className='radio'>
             <label className="radio-inline">
-              <input type="radio" name={this.props.video.id} id="inlineRadio1" value="option1" onClick={this.updateCategory.bind(this, 'song')} /> Song
+              <input type="radio" name={this.props.video.id} id="inlineRadio1" value="option1" onClick={this.updateCategory.bind(this, 'song')}/> Song
             </label>
             <label className="radio-inline">
               <input type="radio" name={this.props.video.id} id="inlineRadio2" value="option2" onClick={this.updateCategory.bind(this, 'technique')} /> Technique

@@ -17,16 +17,16 @@
             <li><a data-toggle="tab" href="#menu2">Technique</a></li>
             <li><a data-toggle="tab" href="#menu3">Gear</a></li>
           </ul>
-        </div>
-
           <%= react_component 'AllVideos', { data: @videos } %>
           <% else %>
-          <h3>Sign in to your YouTube account to view your playlists</h3>
-          <%= link_to 'Log In', '/auth/google_oauth2' %>
-        </div>
+          <div class="landing-text">
+            <h3>Organize YouTube music instruction videos.  Search for a video and add it to your
+            playlist.  Select the radio button to filter video by type.</h3>
+            <h4>Log in in to your YouTube account to view your playlists</h4>
+            <%= link_to 'Log In', '/auth/google_oauth2' %>
+          </div>
         <% end %>
-
-
+      </div>
     </div>
     <div class="col-md-3 main-panel">
       <%= render 'search', object: @search %>
